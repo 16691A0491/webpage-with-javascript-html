@@ -175,6 +175,113 @@ h1.h12{
 </html>
 
 
+//w3schools.css
+.l5{
+  width:20%;
+  height:100%;
+  margin-left:0px;
+  float:left;
+}
+.l7{
+  font-size:25px;
+}
+.l8{
+  margin-left:0px;
+
+  font-size:20px;
+}
+.l10{
+  background-color: #6a5e5e;
+  color:white;
+  font-size:20px;
+  cursor:pointer;
+  border:5px solid #6a5e5e;
+  font-family:Goudy Old Style;
+}
+.l11:hover{
+  background-color: #c4b2b2;
+  color:black;border:5px solid #c4b2b2;
+}
+.l12{
+  background-color: #f8f1f1;
+  width:40%;
+  border-radius: 10px;
+  padding-left:10px;
+  margin-left:500px;
+  position:absolute;
+  top:200px;
+  right:100px;
+  height:400px;
+}
+.l13{
+  margin-left:10px;
+  padding-right:350px;
+  border-left:green 3px solid;
+  padding-left:10px;
+  background-color: white;
+  font-size:17px;
+  width:30%;
+  word-spacing: 2px;
+}
+.l14{
+  color:blue;
+
+}
+.l15{
+  color:brown;
+  font-size:17px;
+}
+
+.l16{
+  position:absolute;
+  left:250px;
+  top:700px;
+  width:80%;
+  background-color: #fdf7f7;
+  border-radius:5px;
+  height:450px;
+}
+.l17{
+  font-size:17px;
+  margin-left:20px;
+  margin-right:650px;
+  background-color: white;
+  border-left: green 4px solid;
+}
+.l18{
+  position:absolute;
+  top:720px;
+  left:1050px;
+  font-size:80px;
+  color:#443737;
+}
+.l19{
+  position:absolute;
+  top:850px;
+  left:880px;
+  font-size:30px;
+  color:#443737;
+}
+.l20{
+  position:absolute;
+  top:950px;
+  left:940px;
+  font-size:20px;
+}
+.l21{
+  background-color:#645959;
+  border:5px solid #645959;
+  color:white;
+}
+.l22:hover{
+  cursor:pointer;
+  color:black;
+  background-color: #efe9e9;
+  border:5px solid #efe9e9;
+}
+.l23{
+  color:red;
+}
 
 
 
