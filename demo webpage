@@ -1,0 +1,183 @@
+// w3schools.html
+<!DOCTYPE html>
+<html>
+<head>
+<title>w3schools</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="w3so.css">
+<style>
+h1.h11,h1.h12{
+  color:#574949;
+  display:inline-block;
+  margin:2px;
+  font-size:45px;
+}
+.div1{
+  height:40px;
+  background-color:#54b958;
+  padding:10px;
+  margin:0 auto;
+  margin-right:0px;
+  box-shadow: black;
+}
+.p1{
+
+  float:right;
+  text-align:top;
+  vertical-align: top;
+  margin-top:30px;
+  margin-right:20px;
+  letter-spacing: 3px;
+  padding-right:20px;
+}
+h1.h12{
+  color:green;
+  display:inline-block;
+}
+.l1{
+  color:white;
+  cursor:pointer;
+  list-style-type:none;
+  letter-spacing: 2px;
+  font-size: 20px;
+  margin-right:30px;
+}
+.l2{
+  display:inline-block;
+  letter-spacing: 4px;
+  word-spacing: 5px;
+  margin-right: 30px;
+}
+.s1:hover{
+  background-color: white;
+  color:black;
+  height:40px;
+  width:50px;
+  letter-spacing: 4px;
+}
+.l4{
+  display: inline-block;
+  margin-left:480px;
+}
+.l6:hover{
+  background-color: #c3bdbd;
+  cursor:pointer;
+}
+
+</style>
+</head>
+<body>
+
+      <h1 class="h11" >w3schools</h1>
+      <h1 class="h12">.com</h1>
+      <p class="p1">THE WORLD'S LARGEST WEB DEVELOPER SITE</p>
+      <div class="div1">
+          <ul class="l1">
+            <li class="l2"><span class="s1">TUTORIALS<i class="fa fa-caret-down"></i></span></li>
+            <li class="l2"><span class="s1">REFERENCES<i class="fa fa-caret-down"></i></span></li>
+            <li class="l2"><span class="s1">EXAMPLES<i class="fa fa-caret-down"></i></span></li>
+            <li class="l2"><span class="s1">EXCERCISES<i class="fa fa-caret-down"></i></span></li>
+            <li class="l4"><i class="fa fa-globe" aria-hidden="true"></i>&nbsp&nbsp&nbsp&nbsp<i class="fa fa-search" aria-hidden="true"></i></li>
+
+      </div>
+      <div>
+      <div class="l5" style="float:left;">
+        <nav style="float:left">
+      <ul style="list-style-type:none;">
+        <li class="l7">HTML and CSS</li>
+        <br>
+        <li class="l6 l8">Learn HTML</li>
+
+        <li class="l6 l8">Learn CSS</li>
+        <li class="l6 l8">Learn Bootstrap</li>
+        <li class="l6 l8">Learn W3.CSS</li>
+        <li class="l6 l8">Learn Colors</li>
+        <li class="l6 l8">Learn Icons</li>
+        <li class="l6 l8">Learn Graphics</li>
+        <li class="l6 l8">Learn How To</li>
+        <li class="l6 l8">Learn Sass</li>
+        <br>
+        <li class="l7">JavaScript</li>
+        <br>
+        <li class="l6 l8">Learn JavaScript</li>
+        <li class="l6 l8">Learn jQuery</li>
+        <li class="l6 l8">Learn React</li>
+        <li class="l6 l8">Learn AngularJS</li>
+        <li class="l6 l8">Learn JSON</li>
+        <li class="l6 l8">Learn AJAX</li>
+        <li class="l6 l8">Learn W3.JS</li>
+        <br>
+        <li class="l7">Server Side<li>
+          <br>
+        <li class="l6 l8">Learn SQL</li>
+        <li class="l6 l8">Learn PHP</li>
+        <li class="l6 l8">Learn ASP</li>
+        <li class="l6 l8">Learn Node.js</li>
+        <li class="l6 l8">Learn Raspberry Pi</li>
+        <br>
+        <li class="l7">Programming<li>
+        <br>
+        <li class="l6 l8">Learn Python</li>
+        <li class="l6 l8">Learn Java</li>
+        <li class="l6 l8">Learn C++</li>
+        <li class="l6 l8">Learn Machine Learning</li>
+      </ul>
+        </nav>
+      </div>
+
+        <div class="l9">
+        <h1 style="font-size:70px;color:#4b4444;margin-right:700px;padding-top:20px;padding-bottom:0px;margin-left:450px;font-family:sans-serif;">HTML<br></h1>
+        <p style="font-size:23px;color:#4b4444;padding-top:0px;;margin-right:500px;margin-left:350px;font-family:sans-serif;">The language for building web pages</p>
+        <div style="margin-left:400px;"><span class="l10 l11">Learn HTML</span>&nbsp&nbsp<span class="l10 l11">HTML REFERENCES</span></div>
+      </div>
+      <div classx="l12">
+      <h1>HTML Example</h1>
+<pre class="l13">
+<span class="l14">&lt</span><span class="l15">!DOCTYPE </span><span style="color:red;">html</span><span class="l14">&gt</span>
+
+<span class="l14">&lt</span><span class="l15">html</span><span class="l14">&gt</span>
+<span class="l14">&lt</span><span class="l15">title</span><span class="l14">&gt</span>HTML Tutorial<span class="l14">&lt</span><span class="l15">/title</span><span class="l14">&gt</span>
+<span class="l14">&lt</span><span class="l15">body</span><span class="l14">&gt</span>
+
+<span class="l14">&lt</span><span class="l15">h1</span><span class="l14">&gt</span>This is a heading<span class="l14">&lt</span><span class="l15">/h1</span><span class="l14">&gt</span>
+<span class="l14">&lt</span><span class="l15">p</span><span class="l14">&gt</span>This is a Paragraph<span class="l14">&lt</span><span class="l15">/p</span><span class="l14">&gt</span>
+
+<span class="l14">&lt</span><span class="l15">body</span><span class="l14">&gt</span>
+<span class="l14">&lt</span><span class="l15">html</span><span class="l14">&gt</span>
+<br>
+</pre>
+<span style="background-color:#5fcb5f;font-size:20px;border:5px solid #5fcb5f;cursor:pointer;">Try it Yourself <i class="fa fa-angle-double-right" aria-hidden="true"></i></span>
+    </div>
+    <div class="l16">
+    <h2 style="padding-left:20px;padding-top:20px;">CSS Example</h2>
+    <pre class="l17">
+  <span class="l15">body</span> {
+    <span class="l23">background-color</span>:<span class="l14">lightblue</span>;
+  }
+
+  <span class="l15">h1</span> {
+    <span class="l23">color</span>:<span class="l14">white</span>;
+    <span class="l23">text-align</span>:<span class="l14">center</span>;
+  }
+
+  <span class="l15">p</span> {
+    <span class="l23">font-family</span>:<span class="l14">verdana</span>;
+    <span class="l23">font-size</span>:<span class="l14">20px</span>;
+  }
+  </pre>
+  <br>
+  <span style="margin-left:20px;background-color:#5fcb5f;font-size:20px;border:5px solid #5fcb5f;cursor:pointer;">Try it Yourself <i class="fa fa-angle-double-right" aria-hidden="true"></i></span>
+  </div>
+  <h1 class="l18">css</h1>
+  <p class="l19">The language for styling web pages</p>
+  <div class="l20"><span class="l21 l22">LEARN CSS</span>&nbsp&nbsp<span class="l21 l22">CSS REFERECES</SPAN>
+</body>
+</html>
+
+
+
+
+
+
+
+
