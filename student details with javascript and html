@@ -1,0 +1,304 @@
+//studenthtml.html
+<!DOCTYPE html>
+<html>
+<head>
+<title>student details</title>
+<link rel="stylesheet" href="studentcss.css" type="text/css">
+<script src="studentjs.js"></script>
+</head>
+<body style="margin-left:20px" onload="loadingFun()">
+  <h1 class="main-head">Student Details</h1>
+  <marquee direction="right">created by PAVAN KUMAR REDDY</marquee>
+  <button id="btn1" onclick="btnFun()">click here to add student details</button>
+<div id="mainDiv">
+  <table id="enrolled">
+    <tr id="titleRow">
+      <th>Student Name</th>
+      <th>Roll No</th>
+      <th>Father Name</th>
+      <th>Student Email</th>
+      <th colspan="2">Edit and Delete</th>
+    </tr>
+  </table>
+</div>
+<div class="popup">
+    <div class="window-popup">
+      <span class="close-btn" onclick="closeFun('popup')" >&times</span>
+      <h2 class="heading">Enter the student Details</h2>
+      <div class="styling">
+        <input id="sname" autofocus class="ipstyle" size="70" placeholder="Enter a Student Name" type="text" ><br>
+      <input class="ipstyle" id="sroll" size="70" placeholder="Enter the Student Roll No" type="text">
+      <input class="ipstyle" size="70" id="sfather" placeholder="Enter the Father Name " type="text">
+      <input class="ipstyle" size="70" id="semail" placeholder="Enter the Student e-mail" type="text"><br>
+      <button class="submit" onclick="submitFun()">Submit</button>
+      <button class="close" onclick="closeFun('popup')">close</button>
+      </div>
+    </div>
+  </div>
+  <div class="popup1">
+      <div class="window-popup">
+        <span class="close-btn" onclick="closeFun('popup1')" >&times</span>
+        <h2 class="heading">Enter the student Details</h2>
+        <div class="styling">
+        <input id="ssname" class="ipstyle" size="70" placeholder="Enter a Student Name" type="text" autofocus><br>
+        <input class="ipstyle" id="ssroll" size="70" placeholder="Enter the Student Roll No" type="text" >
+        <input class="ipstyle" size="70" id="ssfather" id placeholder="Enter the Father Name " type="text">
+        <input class="ipstyle" size="70" id="ssemail" placeholder="Enter the Student e-mail" type="text"><br>
+        <button class="submit" onclick="updateFun()">Update</button>
+        <button class="close" onclick="closeFun('popup1')">close</button>
+        </div>
+      </div>
+    </div>
+</body>
+</html>
+
+//studentcss.css
+
+marquee{
+  font-size:20px;
+  font-family:sans-serif;
+  font-weight:lighter;
+  color:orange;
+
+}
+
+#enrolled{
+  font-size:20px;
+  margin-top:20px;
+  }
+table{
+  width:100%;
+  font-family:sans-serif;
+  border-collapse: collapse;
+}
+.editF:hover{
+  cursor:pointer;
+}
+.removec{
+  cursor:pointer;
+}
+th{
+  background-color: #f1bc59;
+}
+td,th{
+  border: 1px solid #dddddd;
+  padding:10px;
+
+}
+#mainDiv{
+  margin-left:200px;
+  margin-right:200px;
+}
+  tr:nth-child(even)
+  {
+    background-color: #dddddd;
+
+  }
+  #btn1{
+  background-color: green;
+  font-size:20px;
+  color:white;
+  padding:10px;
+  outline:none;
+  margin-left:20px;
+  }
+#btn1:hover{
+  cursor:pointer;
+}
+.popup{
+  position:fixed;
+  justify-content: center;
+  background:rgba(0,0,0,0.6);
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  display:none;
+
+}
+.window-popup{
+  position : absolute;
+  background-color:#e9e4e4;
+  width:700px;
+  height:400px;
+  top:25%;
+  left:25%;
+  border-radius:5px;
+}
+.styling
+{
+  text-align: center;
+  padding:20px;
+  margin-left:5px;
+}
+.ipstyle{
+  padding:10px;
+  font-size:15px;
+  margin:7px;
+
+  border :none;
+
+}
+.popup1{
+  position:fixed;
+  justify-content: center;
+  background:rgba(0,0,0,0.6);
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  display:none;
+}
+.heading{
+  color:green;
+  text-align:center;
+}
+.submit{
+   position:absolute;
+    bottom:10px;
+    text-align:center;
+    padding:10px;
+    margin-left:-80px;
+    color:white;
+    background-color: green;
+    font-size:20px;
+    text-decoration:none;
+}
+.submit:hover{
+  cursor:pointer;
+}
+.close{
+  position:absolute;
+   bottom:10px;
+   text-align:center;
+   padding:10px;
+   margin-left:10px;
+   color:white;
+   background-color: green;
+   font-size:20px;
+   text-decoration:none;
+
+}
+.close:hover{
+  cursor:pointer;
+
+}
+.main-head{
+  text-align:center;
+  padding-top;20px;
+  color:green;
+}
+.close-btn{
+  float:right;
+  font-size:30px;
+  padding-right:10px;
+}
+.close-btn:hover{
+  cursor:pointer;
+}
+
+//studentjs.js
+
+var index1;
+var modal=document.getElementsByClassName("popup");
+window.onclick=function(event)
+{
+    if(event.target==modal){
+    modal.style.display="none";
+}
+}
+
+function btnFun(){
+  document.querySelector(".popup").style.display="flex";
+  document.getElementById("sname").focus();
+}
+function closeFun(selector){
+    document.querySelector("."+selector+" ").style.display="none";
+    document.getElementById("sname").value="";
+    document.getElementById("sroll").value="";
+    document.getElementById("sfather").value="";
+    document.getElementById("semail").value="";
+
+}
+function editFun(index){
+  index1=index;
+  document.querySelector(".popup1").style.display="flex";
+studentArray =JSON.parse(sessionStorage.getItem("course"));
+console.log(studentArray[index].name);
+//var studentObj=studentArray[index];
+document.getElementById("ssname").value=studentArray[index].name;
+document.getElementById("ssroll").value=studentArray[index].roll;
+document.getElementById("ssfather").value=studentArray[index].fname;
+document.getElementById("ssemail").value=studentArray[index].email;
+sessionStorage.setItem("course",JSON.stringify(studentArray));
+document.getElementById("ssname").focus();
+}
+function submitFun(){
+    var studentArray=[];
+    var course1={
+    name : document.getElementById("sname").value,
+    roll : document.getElementById("sroll").value,
+    fname: document.getElementById("sfather").value,
+    email :document.getElementById("semail").value
+  };
+  studentArray =JSON.parse(sessionStorage.getItem("course")) || [];
+  studentArray.push(course1);
+  sessionStorage.setItem("course",JSON.stringify(studentArray));
+  loadingFun();
+  closeFun('popup');
+}
+
+function removeFun(index){
+    studentArray=JSON.parse(sessionStorage.getItem("course"));
+    studentArray.splice(index,1);
+    sessionStorage.setItem("course",JSON.stringify(studentArray));
+    loadingFun();
+}
+function loadingFun(){
+  studentArray=[];
+  studentArray =JSON.parse(sessionStorage.getItem("course"));
+  var mytbl = document.getElementById("enrolled");
+  mytbl.getElementsByTagName("tbody")[0].innerHTML = mytbl.rows[0].innerHTML;
+  for(var i=0;i<studentArray.length;i++)
+{
+    var row=document.getElementById("enrolled").insertRow(1);
+    var cell1=row.insertCell(0);
+    var cell2=row.insertCell(1);
+    var cell3=row.insertCell(2);
+    var cell4=row.insertCell(3);
+    var cell5=row.insertCell(4);
+    var cell6=row.insertCell(5);
+    cell1.innerHTML=studentArray[i].name;
+    cell2.innerHTML=studentArray[i].roll;
+    cell3.innerHTML=studentArray[i].fname;
+    cell4.innerHTML=studentArray[i].email;
+    cell5.innerHTML='<button class="editF" onclick="editFun('+i+')">Edit</button>';
+    cell6.innerHTML='<button class="removec" onclick="removeFun('+i+')">Delete</button>';
+    }
+    sessionStorage.setItem("course",JSON.stringify(studentArray));
+}
+function updateFun()
+{
+  studentArray=JSON.parse(sessionStorage.getItem("course"));
+  var studentObj=studentArray[index1];
+  console.log(studentArray[index1].name);
+  studentArray[index1]["name"]=document.getElementById("ssname").value;
+  console.log(studentObj.name);
+  studentArray[index1].roll=document.getElementById("ssroll").value;
+  studentArray[index1].fname=document.getElementById("ssfather").value;
+  studentArray[index1].email=document.getElementById("ssemail").value;
+  studentArray.splice(index1,1,studentArray[index1]);
+  sessionStorage.setItem("course",JSON.stringify(studentArray));
+  loadingFun();
+  closeFun('popup1');
+}
+
+
+
+
+
+
+
+
+
+
