@@ -1,0 +1,135 @@
+//todolist.html
+<!DOCTYPE html>
+<html>
+<head>
+  <title>ToDoList</title>
+  <link rel="stylesheet" type="text/css" href="todocss.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <script src="todojs.js"></script>
+</head>
+<body onload="gettodolist1()">
+<div id="div2">
+<div id="div1">
+  <div id="span1"><b>My To Do List</b></div><br>
+  <div><input id="ip1" type="text" name="titlename" placeholder="Title...">
+    <button id="bt1" onclick="addelement()">Add</button>
+  </div>
+
+  <div id="demo"></div>
+
+<script>
+  function gettodolist1(){
+    var text="<ul>";
+      for(var j=0;j<sessionStorage.length;j++)
+      {
+
+       var keyname=sessionStorage.key(j);
+      /*  var str1=`<i onclick="delement(${keyname})" class="fa fa-close" style="float:right"></i>`;
+          console.log(str1);
+        text=text+"<li>"+sessionStorage.getItem(keyname)+str1+"</li>";
+*/
+
+
+  text=text+"<li>"+sessionStorage.getItem(keyname)+'<i onclick="delement(\''+keyname+'\')" class="fa fa-close" style="float:right"></i></li>';
+
+
+      }
+  text+="</ul>";
+  document.getElementById("demo").innerHTML=text;
+
+}
+</script>
+  </div>
+  </div>
+</body>
+</html>
+
+
+//todolist.css
+#div1{
+background-color: red;
+height:10%;
+width:100%;
+}
+#div2{
+  margin:40px;
+  margin-top:0px;
+}
+#ip1{
+  margin-left:20px;
+  width:70%;
+  font-size: 20px;
+  height:35px;
+  margin-bottom:50px;
+  padding-left:20px;
+  margin-right:0px;
+  margin-bottom:35px;
+}
+#span1{
+  text-align: center;
+  font-size: 20px;
+  padding-top:30px;
+  color:white;
+  font-family:
+}
+
+#bt1{
+  margin-left:0px;
+  padding-left:0px;
+  width:25%;
+  height:45px;;
+}
+ul{
+  margin:0px;
+  padding:0px;
+}
+
+li{
+  list-style-type:none;
+  background-color:#d3cece;
+  font-size: 18px;
+  padding:10px;
+  padding-left:20px;
+  border:1px solid black;
+
+}
+li:nth-child(even) {background: #CCC}
+li:nth-child(odd) {background: #FFF}
+
+li:hover{
+  background-color: #b6a2a2;
+  cursor:pointer;
+  color:white;
+  border-color: #1c1b1b;
+}
+
+
+//todolist.js
+var i=0;
+function addelement (){
+
+    var value1=document.getElementById("ip1").value;
+    if(value1!=""){
+    sessionStorage.setItem(value1+i,value1);
+    i=i+1;
+    }
+  gettodolist1();
+}
+function delement(keyname){
+  sessionStorage.removeItem(keyname);
+  gettodolist1();
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
