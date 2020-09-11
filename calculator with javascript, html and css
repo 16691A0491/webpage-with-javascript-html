@@ -1,0 +1,154 @@
+// JAVASCRIPT AND HTML CODE:
+
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="csscalc.css">
+<title>caculator</title>
+<script>
+
+  function calraj(x)
+  {
+    document.getElementById('demo').value+=x;
+
+  }
+  function equal()
+  {
+    k=document.getElementById('demo').value;
+    l=eval(k);
+    document.getElementById('demo').value=l;
+
+  }
+  function clear1()
+  {
+    str2="";
+    document.getElementById('demo').value="";
+  }
+  function sfun(val)
+  {
+      if(val=='sin')
+      {
+        t=document.getElementById('demo').value;
+        document.getElementById('demo')+=Math.sin(t);
+      }
+
+
+
+  }
+</script>
+</head>
+<body>
+
+
+  <div class="class1">
+
+
+    <div style="border:1px solid black;text-align:center;position:center;height:50%">
+    <input class="input1" type="text" placeholder="0" id="demo">
+
+      <span class="class3" style="margin-top:10px">
+        <button class="class2" type="button" onclick="calraj()" id="frombtn" style="text-align:center;">Rad</button>
+        <button class="class2" type="button" onclick="calraj()" id="frombtn" style="text-align:center">Deg</button>
+        <button type="button" class="class2" onclick="calraj()" style="text-align:center" id="frombtn">x!</button>
+        <button type="button" class="class2" onclick="calraj('(')" style="text-align:center" id="frombtn">(</button>
+        <button class="class2" type="button" onclick="calraj(')')" style="text-align:center" id="frombtn">)</button>
+        <button class="class2" type="button" onclick="calraj('%')" style="text-align:center" id="frombtn">%</button>
+        <button class="class2" type="button" onclick="clear1()" style="text-align:center">AC</button>
+      </span>
+    <br>
+      <span class="class3">
+        <button class="class2" type="button" onclick="calraj()" style="text-align:center" id="frombtn">Inv</button>
+        <button class="class2" type="button" onclick="sfun('sin')" style="text-align:center" id="frombtn">sin</button>
+        <button type="button" class="class2" onclick="sfun('ln')" style="text-align:center" id="frombtn">ln</button>
+        <button type="button" class="class2" onclick="calraj('7')" style="text-align:center" id="frombtn">7</button>
+        <button class="class2" type="button" onclick="calraj('8')" style="text-align:center" id="frombtn">8</button>
+        <button class="class2" type="button" onclick="calraj('9')" style="text-align:center" id="frombtn">9</button>
+        <button class="class2" type="button" onclick="calraj('/')" style="text-align:center" id="frombtn">/</button>
+      </span>
+      <span class="class3">
+        <button class="class2" type="button" onclick="sfun('pi')" style="text-align:center" id="frombtn">pi</button>
+        <button class="class2" type="button" onclick="sfun('cos')" style="text-align:center" id="frombtn">cos</button>
+        <button type="button" class="class2" onclick="sfun('log')" style="text-align:center" id="frombtn">log</button>
+        <button type="button" class="class2" onclick="calraj('4')" style="text-align:center" id="frombtn">4</button>
+        <button class="class2" type="button" onclick="calraj('5')" style="text-align:center" id="frombtn">5</button>
+        <button class="class2" type="button" onclick="calraj('6')" style="text-align:center" id="frombtn" value="6">6</button>
+        <button class="class2" type="button" onclick="calraj('*')" style="text-align:center" id="frombtn">*</button>
+      </span>
+      <span class="class3">
+        <button class="class2" type="button" onclick="sfun('e')" style="text-align:center" id="frombtn">e</button>
+        <button class="class2" type="button" onclick="sfun('tan')" style="text-align:center" id="frombtn">tan</button>
+        <button type="button" class="class2" onclick="sfun('sqrt')" style="text-align:center" id="frombtn">sqrt</button>
+        <button type="button" class="class2" onclick="calraj('1')" style="text-align:center" id="frombtn">1</button>
+        <button class="class2" type="button" onclick="calraj('2')" style="text-align:center" id="frombtn">2</button>
+        <button class="class2" type="button" onclick="calraj('3')" style="text-align:center" id="frombtn">3</button>
+        <button class="class2" type="button" onclick="calraj('-')" style="text-align:center" id="frombtn">-</button>
+      </span>
+      <span class="class3">
+        <button class="class2" type="button" onclick="calraj()" style="text-align:center" id="frombtn">Ans</button>
+        <button class="class2" type="button" onclick="sfun('exp')" style="text-align:center" id="frombtn">EXP</button>
+        <button type="button" class="class2" id="frombtn" style="padding-left:25px;padding-right:25px;padding-bottom:5px;padding-top:2px;margin-top:2px;" onclick="calraj()" style="text-align:center">x<sup>y</sup></button>
+        <button type="button" class="class2" onclick="calraj('0')" style="text-align:center" id="frombtn">0</button>
+        <button class="class2" type="button" onclick="calraj('.')" style="text-align:center;text-size:30px" id="frombtn">.</button>
+        <button class="class2" type="button" onclick="equal()" style="text-align:center" id="frombtn">=</button>
+        <button class="class2" type="button" onclick="calraj('+')" style="text-align:center" id="frombtn">+</button>
+      </span>
+
+
+
+      </div>
+      </div>
+
+
+</body>
+</html>
+
+//CSS Code:
+
+.class1
+{
+  margin:0 auto;
+  width:500px;
+  margin-top:70px;
+  width:50%;
+
+}
+.class2{
+  cursor:pointer;
+  background-color: #dfe1e5;
+  font-style: bold;
+  padding-bottom:12px;
+  padding-top:12px;
+
+  text-decoration:none;
+  border:none;
+  border-radius:4px;
+  margin-top:4px;
+  margin-bottom:4px;
+  width:100px;
+}
+.class2:hover{
+  background-color:#c0cbe1;
+}
+.class3{
+  margin-bottom:10px;
+  margin-left:10px;
+}
+.input1{
+  min-width:90%;
+  max-width:100%;
+  height:100px;
+  text-align:right;
+  margin-top:10px;
+  margin-bottom:10px;
+  margin-left:20px;
+  margin-right:20px;
+  font-size:25px;
+  padding-right:10px;
+
+}
+
+
+
+
+
+
